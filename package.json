@@ -1,0 +1,16 @@
+{
+  "name": "orcamento-pdf",
+  "version": "0.0.1",
+  "description": "an awesome invoice generator",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "author": "Perdidão <lucasecalmeida@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
+}
