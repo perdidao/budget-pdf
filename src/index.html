@@ -9,7 +9,7 @@
   <body>
     <div id="source">
       <header class="header">
-        <img src="assets/images/logo.png" alt="Sadok Climatização" class="header__logo">
+        <div id="logoComponent"></div>
         <div class="header__info">
           <h1 class="header__title">
             Orçamento
@@ -24,18 +24,32 @@
         </div>
         <div id="servicesContent"></div>
       </main>
-      <footer class="footer">SADOK CLIMATIZAÇÃO – CNPJ:21,464,266/0001-65. IE:90744103-21 ENDEREÇO: R: IRMÃ BONA DOSE 177. | 86079380 – LONDRINA – PARANÁ (43)99980-5555 | sadokclimatizacao@gmail.com</footer>
+      <footer class="footer" id="footerContent"></footer>
     </div>
 
     <div class="no-print form">
       <h2>Configurações</h2>
+      <label>
+        Logo
+        <input type="file" id="logo" name="logo">
+      </label>
+      <label>
+        Logo (link)
+        <input type="text" id="logoLink" name="logoLink">
+      </label>
+      <label>
+        Texto do rodapé
+        <input type="text" id="footerContentField" name="footerContentField">
+      </label>
+
+      <h2>Informações do orçamento</h2>
       <label>
         Cliente
         <input type="text" id="clientName" name="clientName" placeholder="Nome do cliente">
       </label>
       <label>
         Validade do orçamento (quantidade de dias)
-        <input type="text" id="daysToExpire" name="daysToExpire" placeholder="Dias de validade" type="number">
+        <input type="number" id="daysToExpire" name="daysToExpire" placeholder="Dias de validade">
       </label>
 
       <h2>Adicionar serviços</h2>
@@ -50,6 +64,8 @@
       <button type="button" id="addServiceAction">
         Adicionar
       </button>
+
+      <div class="form__separator"></div>
 
       <button id="create" type="button" class="no-print main-action">Salvar orçamento</button>
     </div>
