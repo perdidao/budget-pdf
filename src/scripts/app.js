@@ -39,11 +39,12 @@ $addServiceAction.addEventListener('click', () => {
   const newServiceDescEl = document.createElement('pre')
   const newServicePriceEl = document.createElement('p')
 
-
   newServiceDescEl.textContent = newServiceDescription
+  newServiceDescEl.classList.add('service__description')
   newServiceEl.appendChild(newServiceDescEl)
-
+  
   newServicePriceEl.textContent = newServiceValue
+  newServicePriceEl.classList.add('service__price')
   newServiceEl.appendChild(newServicePriceEl)
   
   newServiceEl.classList.add('service')
