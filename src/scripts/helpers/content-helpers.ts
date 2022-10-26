@@ -28,7 +28,6 @@ export const today = () => {
 }
 
 export const daysToExpire = (days) => {
-  console.log(days)
   const date = new Date().addDays(days)
 
   const year = date.getFullYear()
