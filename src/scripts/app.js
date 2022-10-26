@@ -21,7 +21,7 @@ $logo.addEventListener('change', () => {
 // Logo link
 const $logoLink = document.getElementById('logoLink')
 
-const persistentLogoLink = localStorage.getItem('llnk')
+const persistentLogoLink = localStorage.getItem('lsrc')
 if (persistentLogoLink) {
   const fileEl = document.createElement('img')
   fileEl.classList.add('header__logo')
@@ -37,7 +37,7 @@ $logoLink.addEventListener('change', () => {
   fileEl.setAttribute('src', $logoLink.value)
 
   $logoComponent.replaceChildren(fileEl)
-  localStorage.setItem('llnk', $logoLink.value)
+  localStorage.setItem('lsrc', $logoLink.value)
 })
 
 // Footer text
@@ -83,7 +83,6 @@ $daysToExpire.addEventListener('keyup', () => {
   }
 })
 
-
 // *** Add service
 const $addServiceAction = document.getElementById('addServiceAction')
 
@@ -111,5 +110,12 @@ $addServiceAction.addEventListener('click', () => {
 })
 
 // *** Actions
-const $button = document.getElementById('create')
-$button.addEventListener('click', () => window.print())
+const $printBudget = document.getElementById('printBudget')
+$printBudget.addEventListener('click', () => window.print())
+
+const $eraseLocalData = document.getElementById('eraseLocalData')
+$eraseLocalData.addEventListener('click', () => {
+  const localDataKeys = ['ftxt', 'lsrc', 'edt']
+  localDataKeys.forEach(key => localStorage.removeItem(key))
+  window.location.href = '/'
+})
